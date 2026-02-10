@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Матча Латте — BRANDNAME</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ======================== HEADER ======================== -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">BRANDNAME</a>
+
+      <nav class="header__nav">
+        <a href="catalog.html" class="header__link">Каталог</a>
+        <a href="index.html#about" class="header__link">О нас</a>
+        <a href="#delivery" class="header__link">Доставка</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="header__icon" aria-label="Поиск">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="auth.html" class="header__icon" aria-label="Профиль">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="cart.html" class="header__cart">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="header__cart-price mono">0 ₽</span>
+        </a>
+
+        <input type="checkbox" class="header__burger-toggle" id="burger-toggle">
+        <label for="burger-toggle" class="header__burger" aria-label="Меню">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </label>
+        <nav class="header__mobile-nav">
+          <a href="catalog.html" class="header__mobile-link">Каталог</a>
+          <a href="index.html#about" class="header__mobile-link">О нас</a>
+          <a href="#delivery" class="header__mobile-link">Доставка</a>
+          <a href="auth.html" class="header__mobile-link">Профиль</a>
+          <a href="cart.html" class="header__mobile-link">Корзина</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================== PRODUCT DETAIL (ТЗ 3.4) ======================== -->
+    <section class="product-detail">
+      <div class="container">
+        <div class="product-detail__grid">
+
+          <!-- Left: Product Image -->
+          <div class="product-detail__image">
+            <img src="https://placehold.co/600x600/1E1E1E/333333?text=Matcha+Latte" alt="Матча Латте">
+          </div>
+
+          <!-- Right: Product Info -->
+          <div class="product-detail__info">
+
+            <!-- 1. Title (ТЗ 3.4 — п.1) -->
+            <h1 class="product-detail__title">Матча Латте</h1>
+
+            <!-- 2. Price (ТЗ 3.4 — п.2) -->
+            <div class="product-detail__price">350 ₽</div>
+
+            <!-- 3. Volume Selector (ТЗ 3.4 — п.3) -->
+            <div class="volume-selector">
+              <span class="volume-selector__label">Объём</span>
+              <div class="volume-selector__options">
+                <label>
+                  <input type="radio" name="volume" class="volume-option__input" value="300" checked>
+                  <span class="volume-option__btn mono">300 мл</span>
+                </label>
+                <label>
+                  <input type="radio" name="volume" class="volume-option__input" value="500">
+                  <span class="volume-option__btn mono">500 мл</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 4. Toppings (ТЗ 3.4 — п.4) -->
+            <div class="toppings">
+              <span class="toppings__label-text">Топпинги</span>
+              <div class="toppings__list">
+
+                <div class="topping">
+                  <input type="checkbox" class="topping__input" id="topping-tapioca" name="toppings" value="tapioca">
+                  <label for="topping-tapioca" class="topping__label">
+                    <span class="topping__check"></span>
+                    <span>Тапиока</span>
+                    <span class="topping__price">+50 ₽</span>
+                  </label>
+                </div>
+
+                <div class="topping">
+                  <input type="checkbox" class="topping__input" id="topping-jelly" name="toppings" value="jelly">
+                  <label for="topping-jelly" class="topping__label">
+                    <span class="topping__check"></span>
+                    <span>Фруктовое желе</span>
+                    <span class="topping__price">+40 ₽</span>
+                  </label>
+                </div>
+
+                <div class="topping">
+                  <input type="checkbox" class="topping__input" id="topping-cream" name="toppings" value="cream">
+                  <label for="topping-cream" class="topping__label">
+                    <span class="topping__check"></span>
+                    <span>Сливочная пенка</span>
+                    <span class="topping__price">+60 ₽</span>
+                  </label>
+                </div>
+
+                <div class="topping">
+                  <input type="checkbox" class="topping__input" id="topping-popping" name="toppings" value="popping">
+                  <label for="topping-popping" class="topping__label">
+                    <span class="topping__check"></span>
+                    <span>Поппинг боба</span>
+                    <span class="topping__price">+55 ₽</span>
+                  </label>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- 5. Description & Composition (ТЗ 3.4 — п.5) -->
+            <div class="product-detail__desc">
+              <h3 class="product-detail__desc-title">Описание</h3>
+              <p class="product-detail__desc-text">
+                Нежный напиток на основе японского чая матча церемониального качества. Приготовлен на миндальном молоке с лёгким добавлением ванили. Идеальный баланс сладости и терпкости.
+              </p>
+            </div>
+
+            <div class="product-detail__desc">
+              <h3 class="product-detail__desc-title">Состав</h3>
+              <p class="product-detail__desc-text mono">
+                Матча (Япония), миндальное молоко, ваниль, тростниковый сахар, лёд.
+              </p>
+            </div>
+
+            <!-- 6. Add to Cart Button (ТЗ 3.4 — п.6) -->
+            <button class="btn btn--primary btn--full">Добавить в корзину</button>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__column">
+        <div class="footer__logo">BRANDNAME</div>
+        <p class="footer__desc">Авторские напитки для современного города. Вкус, стиль, технологии.</p>
+      </div>
+      <div class="footer__column">
+        <div class="footer__title">Навигация</div>
+        <ul class="footer__list">
+          <li><a href="catalog.html" class="footer__link">Каталог</a></li>
+          <li><a href="index.html#about" class="footer__link">О нас</a></li>
+          <li><a href="#delivery" class="footer__link">Доставка</a></li>
+          <li><a href="cart.html" class="footer__link">Корзина</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <div class="footer__title">Контакты</div>
+        <ul class="footer__list">
+          <li><a href="tel:+78001234567" class="footer__link">+7 (800) 123-45-67</a></li>
+          <li><a href="mailto:hello@brandname.ru" class="footer__link">hello@brandname.ru</a></li>
+          <li><span class="footer__link">Москва, ул. Примерная, 42</span></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <div class="footer__title">Мы в соцсетях</div>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Telegram">
+            <svg viewBox="0 0 24 24"><path d="M21.2 4.8L2.5 11.6c-.6.2-.6.7 0 .9l4.8 1.5 1.8 5.8c.2.5.7.5 1 .2l2.6-2.2 4.9 3.6c.5.4 1.1.1 1.2-.5L22.5 5.7c.2-.7-.4-1.2-1.3-.9z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="VK">
+            <svg viewBox="0 0 24 24"><path d="M12.8 17.5s.3 0 .5-.2c.2-.2.2-.5.2-.5s0-1.5-.7-1.7c-.6-.2-1.5 1-2.3 1.5-.6.3-1.1.2-1.1.2l-2.3.1s-1.2-.1-2.4-1.4C3.7 14.3 2.7 11.5 2.7 11.5s-.1-.2 0-.4c.1-.1.3-.1.3-.1h2.1s.2 0 .3.1c.1.1.2.3.2.3s.4 1 .9 1.9c.9 1.6 1.3 1.3 1.3 1.3.1-.1.2-.4.2-1.5 0-1.5-.1-2.1-.5-2.3-.3-.1-.7-.2-.9-.2 0 0 .2-.3.6-.4.5-.2 1.3-.2 2.3-.2.8 0 1 .1 1.3.1.9.2.6.9.6 2.6 0 .5-.1 1.3.3 1.5.2.1.6-.1 1.3-1.3.5-.8.8-1.8.8-1.8s.1-.2.2-.3c.1-.1.3-.1.3-.1h2.2s.7-.1.8.2c.1.3-.2 1.1-1 2.3-.3.5-.6.8-.7 1-.3.4-.1.5 0 .7.1.2 1.3 1.3 1.3 1.3l.5.5c.4.5.5.8.4 1.1-.1.3-.7.4-.7.4l-2 .1z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 BRANDNAME. Все права защищены.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
